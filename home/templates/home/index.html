@@ -1,0 +1,14 @@
+{% extends "home/layout.html" %}
+{% load static %}
+
+{% block head %}
+<title>Home</title>
+<link rel="stylesheet" href="{% static 'home/index.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h2 id="date">Feb 20</h2>
+  <h1 id="time">10:00</h1>
+</div>
+{% endblock %}

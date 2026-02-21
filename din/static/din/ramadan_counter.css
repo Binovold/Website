@@ -1,0 +1,84 @@
+:root {
+    --title: clamp(2.5rem, 2.5dvw, 7.5rem);
+    --button-size: clamp(250px, 25dvw, 350px);
+}
+
+#outside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.upper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-bottom: 3rem;
+    background-color: rgb(26, 26, 27);
+}
+
+.dhikr {
+    margin-block: .5rem;
+
+    font-size: var(--title);
+}
+
+.virtue {
+    text-align: center;
+    margin-block: 0;
+    font-size: clamp(1.25rem, 1.25dvw, 3.75rem);
+}
+
+.lower {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.count {
+    font-size: var(--title)
+}
+
+.buttons {
+    background-color: #0b85b9;
+    color: var(--white);
+    cursor: pointer;
+
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#plus {
+    width: var(--button-size);
+    height: var(--button-size);
+
+    font-size: clamp(2.5rem, 11dvw, 6rem);
+}
+
+.delete {
+    margin-top: 1.5rem;
+}
+
+#minus, #reset {
+    font-size: clamp(1rem, 2.5dvw, 3.75rem);
+}
+
+#minus {
+    width: calc(var(--button-size) / 2);
+    height: calc(var(--button-size) / 2);
+}
+
+#reset {
+    width: calc(var(--button-size) / 2);
+    height: calc(var(--button-size) / 2);
+    margin-top: 3rem;
+    margin-right: 2rem;
+}
+
+#done {
+    color: #0b85b9;
+    font-size: calc(var(--title) * 1.25);
+}

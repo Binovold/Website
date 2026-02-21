@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home/navbar.css' %}">
+    {% block head %}
+    <title>Document</title>
+    {% endblock %}
+</head>
+<body>
+    <div id="outside">
+        <div class="navbar">
+            <div id="left">
+                <h1 id="home"><a href="{% url 'home:index' %}">Home</a></h1>
+            </div>
+            <div id="middle">
+                <h3><a href="{% url 'simple:index' %}">Simple</a></h3>
+                <h3><a href="{% url 'din:index' %}">Din</a></h3>
+                <h3><a href="">Games</a></h3>
+                <h3><a href="">Advanced</a></h3>
+            </div>
+            <div id="right">
+                <button class="button">Login</button>
+            </div>
+        </div>
+        {% block body %}
+        {% endblock %}
+    </div>
+</body>
+</html>

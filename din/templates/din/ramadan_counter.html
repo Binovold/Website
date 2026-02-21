@@ -1,0 +1,37 @@
+{% extends "home/layout.html" %}
+{% load static %}
+
+{% block head %}
+<title>Ramadan Counter</title>
+<link rel="stylesheet" href="{% static 'din/ramadan_counter.css' %}">
+<script defer src="{% static 'din/ramadan_counter.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+{% if today %}
+<div class="upper">
+    <h1 class="dhikr">
+        {{ today.dhikr }} / {{ today.arabic }}
+    </h1>
+    <p class="virtue">
+        {{ today.virtue }}
+    </p>
+</div>
+
+<div class="lower">
+    <h1 class="count" data-max="{{ today.count }}" data-date="{{ today.date }}">
+        0/{{ today.count }}
+    </h1>
+
+    <div id="buttons">
+        <button class="buttons" id="plus">+</button>
+    </div>
+    <div class="delete">
+        <button class="buttons" id="reset">Reset</button>
+        <button class="buttons" id="minus">-</button>
+    </div>
+</div>
+{% else %}
+    <h1>No Dhikr Today</h1>
+{% endif %}
+{% endblock %}

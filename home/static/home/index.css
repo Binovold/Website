@@ -1,0 +1,25 @@
+#outside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+#date {
+    color: rgb(192, 193, 195);
+    font-size: clamp(1.75rem, 2.25dvw, 4rem);
+
+    margin-bottom: -0.5rem;
+    margin-inline: auto;
+}
+
+#time {
+    color: rgb(226, 233, 237);
+    font-size: clamp(7rem, 9dvw, 25rem);
+
+    margin-block: 0;
+}
